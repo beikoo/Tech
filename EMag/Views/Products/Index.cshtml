@@ -1,0 +1,39 @@
+﻿@model EMag.Models.Products.ListProductsVM
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@{
+    if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div>@ViewBag.ErrorMessage</div>
+    }
+}
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

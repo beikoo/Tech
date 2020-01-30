@@ -1,0 +1,38 @@
+﻿@model EMag.Models.Sales.ListSalesVM
+
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div>@ViewBag.ErrorMessage</div>
+    }
+}
+<table class="table">
+    <tr>
+        <th>
+            Customer
+        </th>
+        <th>
+            Product
+        </th>
+        <th>
+            Quantity
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Sales)
+    {
+        <tr>
+            <td>@item.CustomerFullName</td>
+            <td>@item.ProductName</td>
+            <td>@item.Quantity</td>
+
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

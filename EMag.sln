@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMag", "EMag\EMag.csproj", "{2E04C123-F033-4F7C-83C3-388B45FD3F37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2FCC164B-64B3-44E1-823C-C43CB254B934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{80AA56F4-DC04-4B8D-8B94-1C7EB02764A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E04C123-F033-4F7C-83C3-388B45FD3F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E04C123-F033-4F7C-83C3-388B45FD3F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E04C123-F033-4F7C-83C3-388B45FD3F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E04C123-F033-4F7C-83C3-388B45FD3F37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FCC164B-64B3-44E1-823C-C43CB254B934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCC164B-64B3-44E1-823C-C43CB254B934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCC164B-64B3-44E1-823C-C43CB254B934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCC164B-64B3-44E1-823C-C43CB254B934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80AA56F4-DC04-4B8D-8B94-1C7EB02764A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80AA56F4-DC04-4B8D-8B94-1C7EB02764A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80AA56F4-DC04-4B8D-8B94-1C7EB02764A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80AA56F4-DC04-4B8D-8B94-1C7EB02764A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C401631D-F361-4EAC-9AB9-3FF03FA4A1A7}
+	EndGlobalSection
+EndGlobal

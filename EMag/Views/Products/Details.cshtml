@@ -1,0 +1,79 @@
+﻿@model EMag.Models.Products.ProductsModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd> 
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @using (Html.BeginForm("Buy", "Sales"))
+     {
+        @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.Hidden("ProductID", Model.ID)
+        <div class="form-group">
+            @Html.Label("Quantity", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Quantity", 1, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="Validation-message">
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <span id="current-price">
+                @Model.Price
+            </span>
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Buy" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+     }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<script>
+    $('#Quantity').on("input", function ()
+    {
+        $('#current-price').empty();
+        $('#current-price').text($('#Quantity').val() *@Model.Price);
+    });
+</script>
